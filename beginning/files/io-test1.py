@@ -5,7 +5,7 @@ list = ['legend\n', 'says\n', 'this\n', 'will\n',
         'not\n', 'be\n', 'that\n', 'painful\n']
 output.writelines(list)
 
-# This is NOT required, but see this: https://stackoverflow.com/questions/25070854/why-should-i-close-files-in-python#:~:text=Python%20automatically%20closes%20a%20file,method%20to%20close%20a%20file.
+# This is NOT required, GC would close it, but see this: https://stackoverflow.com/questions/25070854/why-should-i-close-files-in-python#:~:text=Python%20automatically%20closes%20a%20file,method%20to%20close%20a%20file.
 output.close()
 
 # Default is 'R' mode if not specified
@@ -16,4 +16,5 @@ lines = input.readlines()
 print(lines[0])
 print(lines[1])
 
+# This is not required too, OS will probably release sources at end of the program.
 input.close()
