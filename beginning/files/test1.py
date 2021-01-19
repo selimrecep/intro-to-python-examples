@@ -15,3 +15,5 @@ lines = input.readlines()
 # lines[i] contains new line character at the end
 print(lines[0])
 print(lines[1])
+
+input.close()
